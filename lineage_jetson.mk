@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configuration for jetson.
-$(call inherit-product, device/nvidia/jetson/full_jetson.mk)
-
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+
+# Inherit device configuration for jetson.
+$(call inherit-product, device/nvidia/shieldtablet/lineage.mk)
+$(call inherit-product, device/nvidia/jetson/full_jetson.mk)
 
 PRODUCT_NAME := lineage_jetson
 PRODUCT_DEVICE := jetson
